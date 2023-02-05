@@ -1,19 +1,9 @@
-package org.example;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-public class chuckJsonNoris {
-    public static void main(String[] args) throws Exception {
-        String url = "https://api.chucknorris.io/jokes/random";
-
-        HttpRequest request = HttpRequest.newBuilder().GET().uri(URI.create(url)).build();
-
-        HttpClient httpClient = HttpClient.newBuilder().build();
-
-        HttpResponse<String> httpResponse = httpClient.send(request,HttpResponse.BodyHandlers.ofString());
-
-        System.out.println(httpResponse.statusCode());
-        System.out.println(httpResponse.body());
-    }
+{
+    "categories": [],
+    "created_at": "2020-01-05 13:42:26.766831",
+    "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+    "id": "XEUk2e80SAGCbXXbksoSOw",
+    "updated_at": "2020-01-05 13:42:26.766831",
+    "url": "https://api.chucknorris.io/jokes/XEUk2e80SAGCbXXbksoSOw",
+    "value": "Chuck Norris uses Donald Trump's face for toilet paper. That's why he looks so shitty ugly and has Chuck Norris' golden shit smeared on his shit stained hair"
 }
